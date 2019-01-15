@@ -27,7 +27,7 @@ app.use(flash()); //better before the passport configuration
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
-    secret: "once again souna cutest cat",
+    secret: "once again camping !!",
     resave: false,
     saveUninitialized: false
 }));
@@ -65,7 +65,7 @@ app.use(methodOverride("_method"));
 //     {
 //         name: "Salmon Creek",
 //         image: "https://images.unsplash.com/photo-1538475501351-ddcf9a9333bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c04574d04afc0d40c36bf0e70ff99a0f&auto=format&fit=crop&w=675&q=80",
-//         description: "ay description ba2a mate2refnash!!"
+//         description: ""
 //     }, function(err,campground){
 //         if(err){
 //             console.log(err);
@@ -95,7 +95,7 @@ app.use(commentRoutes);
 //starting the server
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("your server has started!!");
-})
+});
 
 
 
