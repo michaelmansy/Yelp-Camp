@@ -50,7 +50,12 @@ app.use(function(req,res,next){
 
 
 //connect mongoose to our database which we will create
-mongoose.connect('mongodb://localhost/yelp_camp',{useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/yelp_camp',{useNewUrlParser: true});
+
+
+mongoose.connect('mongodb://michael:lola7777@ds157544.mlab.com:57544/yelpcamp',{useNewUrlParser: true});
+
+
 
 //so that we dont have to write res.render("landing.ejs")
 app.set("view engine", "ejs");
