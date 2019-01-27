@@ -32,7 +32,7 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
-// kol el functions di gaya m3 el passport package
+// functions that comes with passport package
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -64,30 +64,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(methodOverride("_method"));
 
-
-
-// Campground.create(
-//     {
-//         name: "Salmon Creek",
-//         image: "https://images.unsplash.com/photo-1538475501351-ddcf9a9333bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c04574d04afc0d40c36bf0e70ff99a0f&auto=format&fit=crop&w=675&q=80",
-//         description: ""
-//     }, function(err,campground){
-//         if(err){
-//             console.log(err);
-//         }else{
-//             console.log("newly created campground");
-//             console.log(campground);
-//         }
-//     });
-
-
-
-//we have our array object in top here in order to be accessible anywhere
-//  var campgrounds = [
-//         {name : "Salmon Creek", img : "http://www.flickr.com/photos/bcvacation/16573646931"},
-//         {name : "Granite Hill", img : "https://www.google.ca/imgres?imgurl=https%3A%2F%2Fwww.planetware.com%2Fphotos-large%2FUSUT%2Futah-zion-national-park-camping-south-campground.jpg&imgrefurl=https%3A%2F%2Fwww.planetware.com%2Futah%2Fbest-campgrounds-near-zion-national-park-us-ut-113.htm&docid=QjfaaAX1d77rFM&tbnid=7bCQQHjZcvB22M%3A&vet=10ahUKEwjt_o6Y6d3dAhVjleAKHQaFC8oQMwh_KAwwDA..i&w=730&h=449&hl=en&bih=577&biw=1366&q=campgrounds&ved=0ahUKEwjt_o6Y6d3dAhVjleAKHQaFC8oQMwh_KAwwDA&iact=mrc&uact=8"},
-//         {name : "Mountain's Goat Rest", img : "https://www.google.ca/imgres?imgurl=https%3A%2F%2Fwww.tripsavvy.com%2Fthmb%2FhD3_T2KhE8gQXrD-I560zKfH2iQ%3D%2F960x0%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2F4008019776_66cfa6ac4a_o-5660b3095f9b583386bbda64.jpg&imgrefurl=https%3A%2F%2Fwww.tripsavvy.com%2Fbig-sur-camping-1473970&docid=ehOKX0mIIYWZQM&tbnid=rr77Xz0UzR-k6M%3A&vet=10ahUKEwjt_o6Y6d3dAhVjleAKHQaFC8oQMwiiASglMCU..i&w=960&h=640&hl=en&bih=577&biw=1366&q=campgrounds&ved=0ahUKEwjt_o6Y6d3dAhVjleAKHQaFC8oQMwiiASglMCU&iact=mrc&uact=8"}
-//     ]
 
 
 // tell app.js to use those 3 routes files
